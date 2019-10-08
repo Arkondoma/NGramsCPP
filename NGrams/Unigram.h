@@ -17,9 +17,9 @@ class Unigram
 
 public:
 
+	// Initialize unigram maps
 	Unigram()
 	{
-
 		for (int i = 0; i < 26; i++)
 		{
 			unigrams[0].insert(pair<char, int>(ALPHABET[i], 0));

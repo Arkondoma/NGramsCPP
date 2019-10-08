@@ -17,6 +17,7 @@ class Bigram
 
 public:
 
+	// Initialize 2D bigram maps
 	Bigram()
 	{
 		map <char, int> defaultmap;

@@ -4,26 +4,34 @@
 #include <algorithm>
 #include <cmath>
 
+// Read text and update character frequencies for each language
+// Langs (0: Eng, 1: Fr, 2: Du)
 void Unigram::update(int lang, string file)
 {
+	// Open file
 	cout << "Opening " << file << "\n";
 	ifstream target;
 	target.open(file);
+
 	if (target.is_open())
 	{
 		string line;
 		while (getline(target, line))
 		{
+			// Remove non-alphabet characters from line
 			line.erase(remove_if(line.begin(), line.end(), [](char c) { return !isalpha(c); }), line.end());
 			for (auto &c : line)
 			{
+				// Make sure no weird characters got through
 				if (c == '\0') break;
 				else if (!isalpha(c)) continue;
 				try
 				{
+					// Normalize character and update frequency
 					c = tolower(c);
 					unigrams[lang][c]++;
 
+					// Update language tallies
 					switch (lang)
 					{
 					case 0:
@@ -49,8 +57,10 @@ void Unigram::update(int lang, string file)
 	}
 }
 
+// Test sample phrases
 const void Unigram::evaluate(string file)
 {
+	// Open file
 	ifstream target;
 	target.open(file);
 
@@ -63,6 +73,7 @@ const void Unigram::evaluate(string file)
 			double fr_prob = 0;
 			double du_prob = 0;
 
+			// Remove non-alphabet characters from line
 			cout << "Evaluating: " << text << "\n";
 			text.erase(remove_if(text.begin(), text.end(), [](char c) { return !isalpha(c); }), text.end());
 
@@ -70,8 +81,10 @@ const void Unigram::evaluate(string file)
 			{
 				try 
 				{
+					// Normalize letters
 					c = tolower(c);
 
+					// Update probability for each lang, 0.5 and 13 (26/2) used for consistency
 					en_prob += log10(((double)unigrams[0][c] + 0.5) / (double)(en_total + 13));
 					fr_prob += log10(((double)unigrams[1][c] + 0.5) / (double)(fr_total + 13));
 					du_prob += log10(((double)unigrams[2][c] + 0.5) / (double)(du_total + 13));
