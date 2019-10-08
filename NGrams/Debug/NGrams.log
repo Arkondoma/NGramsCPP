@@ -1,0 +1,6 @@
+﻿  NGrams.cpp
+  Unigram.cpp
+c:\users\nick\source\repos\ngrams\ngrams\unigram.cpp(44): warning C4101: 'ex': unreferenced local variable
+c:\users\nick\source\repos\ngrams\ngrams\unigram.cpp(78): warning C4101: 'ex': unreferenced local variable
+  Generating Code...
+  NGrams.vcxproj -> C:\Users\Nick\source\repos\NGrams\Debug\NGrams.exe

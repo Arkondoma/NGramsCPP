@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2050
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NGrams", "NGrams\NGrams.vcxproj", "{6E31FB83-7B88-466F-925A-CAC1EF0D20A1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6E31FB83-7B88-466F-925A-CAC1EF0D20A1}.Debug|x64.ActiveCfg = Debug|x64
+		{6E31FB83-7B88-466F-925A-CAC1EF0D20A1}.Debug|x64.Build.0 = Debug|x64
+		{6E31FB83-7B88-466F-925A-CAC1EF0D20A1}.Debug|x86.ActiveCfg = Debug|Win32
+		{6E31FB83-7B88-466F-925A-CAC1EF0D20A1}.Debug|x86.Build.0 = Debug|Win32
+		{6E31FB83-7B88-466F-925A-CAC1EF0D20A1}.Release|x64.ActiveCfg = Release|x64
+		{6E31FB83-7B88-466F-925A-CAC1EF0D20A1}.Release|x64.Build.0 = Release|x64
+		{6E31FB83-7B88-466F-925A-CAC1EF0D20A1}.Release|x86.ActiveCfg = Release|Win32
+		{6E31FB83-7B88-466F-925A-CAC1EF0D20A1}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2A59D9CA-153F-49FA-906A-534195F6C4A6}
+	EndGlobalSection
+EndGlobal
